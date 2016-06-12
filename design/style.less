@@ -1,0 +1,140 @@
+@main-color: rgba( 123, 97, 126, 1 );
+@accent-color: rgba( 249, 193, 255, 1 );
+
+body {
+    margin: 0;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+header {
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+
+    ul {
+        display: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            display: inline-block;
+        }
+
+        a {
+            color: #000000;
+            padding: 5px;
+            text-decoration: none;
+        }
+    }
+
+    img {
+        height: 30px;
+        margin: 10px 0;
+    }
+
+    .date-wrapper {
+        display: none;
+    }
+}
+
+.header-image {
+    background-image: url( 'images/livecrowd.jpg' );
+    background-position: bottom center;
+    background-size: cover;
+    height: 150px;
+}
+
+.section-wrapper {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 60px;
+    position: relative;
+
+    & > header {
+        left: 0;
+        position: absolute;
+        right: 0;
+        text-transform: uppercase;
+        top: -40px;
+    }
+
+
+    &.date-wrapper {
+        text-align: center;
+        text-transform: uppercase;
+
+        h2 {
+            font-size: 70px;
+            font-weight: 300;
+            margin: 0;
+        }
+
+        h3 {
+            font-size: 60px;
+            font-weight: 300;
+            margin: 0;
+        }
+
+        .dot {
+            background-color: #000000;
+            border-radius: 50%;
+            height: 150px;
+            margin: 0 auto 60px auto;
+            width: 150px;
+        }
+    }
+
+    &.festivalen-wrapper {
+        background-color: @main-color;
+        color: #ffffff;
+        padding: 20px;
+        text-align: center;
+
+        .content-wrapper {
+            margin: 0 auto;
+            max-width: 768px;
+        }
+    }
+
+    &.lineup-wrapper {
+        .content-wrapper {
+            margin: 0 auto;
+            max-width: 768px;
+        }
+
+        .artist-wrapper {
+            background-color: @main-color;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+
+            header {
+                font-weight: 700;
+                line-height: 2.5;
+            }
+        }
+    }
+
+    &.kontakt-wrapper {
+        @section-spacing: 20px;
+        text-align: center;
+
+        .subheader {
+            font-weight: 700;
+            margin-bottom: @section-spacing;
+            text-transform: uppercase;
+        }
+
+        a {
+            display: block;
+            margin-bottom: @section-spacing;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@import '768.less';

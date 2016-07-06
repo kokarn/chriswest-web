@@ -10,7 +10,7 @@ gulp.task( 'watch', function() {
     // Watch .js files
     gulp.watch( 'scripts/**/*.js', [ 'scripts' ] );
 
-    gulp.watch( 'web/index.html', [ 'markup' ] );
+    gulp.watch( 'web/*', [ 'markup' ] );
 
     // Watch image files
     gulp.watch( 'design/images/**/*', [ 'images' ] );
@@ -56,7 +56,7 @@ gulp.task( 'images', function() {
 });
 
 gulp.task( 'markup', function() {
-    return gulp.src( './web/index.html' )
+    return gulp.src( './web/*' )
         .pipe( gulp.dest( './dist/' ) );
 });
 

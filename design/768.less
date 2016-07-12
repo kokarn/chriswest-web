@@ -21,5 +21,21 @@
                 width: e( 'calc( 33% - 11px )' );
             }
         }
+
+        &.info-wrapper {
+            .info-list {
+                li {
+                    width: e( 'calc( 50% - 5px )' );
+
+                    &:nth-child(2n) {
+                        margin-left: 5px;
+                    }
+
+                    &:nth-child(2n + 1) {
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
     }
 }

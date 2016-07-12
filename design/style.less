@@ -140,6 +140,56 @@ header {
         }
     }
 
+    &.info-wrapper {
+        .info-list {
+            @content-padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            max-width: @max-content-width;
+            padding: 0;
+
+            li {
+                list-style-type: none;
+                margin-bottom: 15px;
+                width: 100%;
+
+                a {
+                    color: #ffffff;
+                }
+
+                span {
+                    background-color: @alternate-color;
+                    display: block;
+                    padding: @content-padding;
+                    position: relative;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+
+                    svg {
+                        display: block;
+                        height: 24px;
+                        position: absolute;
+                        right: 10px;
+                        top: e( 'calc( 50% - 12px )' );
+                        width: 24px;
+                    }
+                }
+
+                p {
+                    background-color: @main-color;
+                    color: #ffffff;
+                    display: none;
+                    line-height: 1.5;
+                    margin: 0;
+                    padding: @content-padding;
+                }
+            }
+        }
+    }
+
     &.kontakt-wrapper {
         @section-spacing: 20px;
         text-align: center;

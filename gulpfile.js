@@ -14,6 +14,9 @@ gulp.task( 'watch', function() {
 
     // Watch image files
     gulp.watch( 'design/images/**/*', [ 'images' ] );
+
+    // Watch design assets
+    gulp.watch( 'design/images/**/*', [ 'design-assets' ] );
 });
 
 gulp.task( 'styles', function() {
@@ -55,6 +58,11 @@ gulp.task( 'images', function() {
         .pipe( gulp.dest( 'dist/images' ));
 });
 
+gulp.task( 'design-assets', function() {
+    return gulp.src( './design/assets/*' )
+        .pipe( gulp.dest( './dist/assets/' ) );
+});
+
 gulp.task( 'markup', function() {
     return gulp.src( './web/*' )
         .pipe( gulp.dest( './dist/' ) );
@@ -62,3 +70,4 @@ gulp.task( 'markup', function() {
 
 gulp.task( 'start', [ 'default', 'watch' ] );
 
+gulp.task( 'default', [ 'styles', 'scripts', 'images', 'design-assets', 'markup' ] );

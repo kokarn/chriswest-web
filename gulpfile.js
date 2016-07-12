@@ -38,8 +38,8 @@ gulp.task( 'styles', function() {
         .pipe( plugins.ignore.exclude( condition ) )
         .pipe( plugins.less() )
         .pipe( plugins.autoprefixer( 'last 2 version' ) )
-        .pipe( plugins.rename( { suffix: '.min' } ) )
         .pipe( plugins.cssnano() )
+        .pipe( plugins.rename( { suffix: '.min' } ) )
         .pipe( gulp.dest( './dist/' ) )
 });
 

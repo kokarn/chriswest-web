@@ -60,4 +60,5 @@ gulp.task( 'markup', function() {
         .pipe( gulp.dest( './dist/' ) );
 });
 
-gulp.task( 'default', [ 'styles', 'scripts', 'images', 'markup' ] );
+gulp.task( 'start', [ 'default', 'watch' ] );
+

@@ -45,6 +45,9 @@ gulp.task( 'styles', function() {
 
 gulp.task( 'scripts', function() {
     return gulp.src( './scripts/**/*.js' )
+        .pipe( plugins.concat( 'scripts.js' ) )
+        .pipe( plugins.uglify() )
+        .pipe( plugins.rename( { suffix: '.min' } ) )
         .pipe( gulp.dest( './dist/' ) );
 });
 

@@ -1,5 +1,13 @@
 @import 'colors.less';
 
+@font-face {
+    font-family: 'Take it easy';
+    font-style: normal;
+    font-weight: normal;
+    src: url( 'assets/takeiteasy-webfont.woff2' ) format( 'woff2' ),
+         url( 'assets/takeiteasy-webfont.woff' ) format( 'woff' );
+}
+
 body {
     font-family: 'Belleza', sans-serif;
     margin: 0;
@@ -33,6 +41,13 @@ header {
     img {
         height: 30px;
         margin: 10px 0;
+    }
+
+    h1 {
+        color: @logo-color;
+        font-family: 'Take it easy', serif;
+        font-size: 44px;
+        margin: 0;
     }
 
     .date-wrapper {

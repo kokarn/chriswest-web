@@ -1,11 +1,26 @@
 @media screen and ( min-width: 768px ) {
+
+    .header-image {
+        height: 200px;
+    }
+
     .section-wrapper {
         margin-left: 0;
         margin-right: 0;
 
-        > header {
-            margin-bottom: 40px;
-            position: static;
+        &.date-wrapper {
+            h2 {
+                font-size: 95px;
+            }
+
+            h3 {
+                font-size: 77px;
+            }
+
+            .large-icon {
+                height: 300px;
+                width: 300px;
+            }
         }
 
         &.festivalen-wrapper {
@@ -13,12 +28,12 @@
         }
 
         &.lineup-wrapper {
-            padding: 40px;
+            padding: 60px;
 
             .artist-wrapper {
                 display: inline-block;
-                margin: 5px;
-                width: e( 'calc( 33% - 11px )' );
+                margin: 10px;
+                width: e( 'calc( 33% - 21px )' );
             }
         }
 
@@ -35,6 +50,37 @@
                         margin-right: 5px;
                     }
                 }
+            }
+        }
+
+        &.booking-wrapper {
+            a {
+                font-size: 70px;
+                line-height: 2.5;
+            }
+        }
+
+        &.kontakt-wrapper {
+            margin-bottom: 60px;
+            margin-left: 10px;
+            margin-right: 10px;
+
+            .columns-wrapper {
+                display: flex;
+                margin: 0 auto;
+                max-width: @max-content-width;
+            }
+
+            .column {
+                margin-bottom: 0;
+            }
+
+            .follow-column {
+                text-align: left;
+            }
+
+            .partners-column {
+                text-align: right;
             }
         }
     }

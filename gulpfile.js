@@ -1,6 +1,7 @@
 'use strict';
 
 var gulp = require( 'gulp' );
+var pump = require( 'pump' );
 var plugins = require( 'gulp-load-plugins' )();
 
 gulp.task( 'watch', function() {
@@ -19,56 +20,81 @@ gulp.task( 'watch', function() {
     gulp.watch( 'design/images/**/*', [ 'design-assets' ] );
 });
 
-gulp.task( 'styles', function() {
+gulp.task( 'styles', function( callback ) {
     var condition = function( file ) {
         return !file.lesshint.success;
     };
 
-    return gulp.src( './design/style.less' )
-        .pipe( plugins.lesshint() )
-        .pipe( plugins.lesshint.reporter() )
-        .pipe( plugins.notify( function ( file ) {
-            if ( file.lesshint.success ) {
-                // Don't show something if success
-                return false;
-            }
+    pump(
+        [
+            gulp.src( './design/style.less' ),
+            plugins.lesshint(),
+            plugins.lesshint.reporter(),
+            plugins.notify( function ( file ) {
+                if ( file.lesshint.success ) {
+                    // Don't show something if success
+                    return false;
+                }
 
-            return file.relative + ' errored with ' + file.lesshint.resultCount + ' errors';
-        }) )
-        .pipe( plugins.ignore.exclude( condition ) )
-        .pipe( plugins.less() )
-        .pipe( plugins.autoprefixer( 'last 2 version' ) )
-        .pipe( plugins.cssnano() )
-        .pipe( plugins.rename( { suffix: '.min' } ) )
-        .pipe( gulp.dest( './dist/' ) )
+                return file.relative + ' errored with ' + file.lesshint.resultCount + ' errors';
+            }),
+            plugins.ignore.exclude( condition ),
+            plugins.less(),
+            plugins.autoprefixer( 'last 2 version' ),
+            plugins.cssnano(),
+            plugins.rename( { suffix: '.min' } ),
+            gulp.dest( './dist/' ),
+        ],
+        callback
+    );
 });
 
-gulp.task( 'scripts', function() {
-    return gulp.src( './scripts/**/*.js' )
-        .pipe( plugins.concat( 'scripts.js' ) )
-        .pipe( plugins.uglify() )
-        .pipe( plugins.rename( { suffix: '.min' } ) )
-        .pipe( gulp.dest( './dist/' ) );
+gulp.task( 'scripts', function( callback ) {
+    pump(
+        [
+            gulp.src( './scripts/**/*.js' ),
+            plugins.concat( 'scripts.js' ),
+            plugins.uglify(),
+            plugins.rename( { suffix: '.min' } ),
+            gulp.dest( './dist/' )
+        ],
+        callback
+    );
 });
 
-gulp.task( 'images', function() {
-    return gulp.src( 'design/images/**/*' )
-        .pipe( plugins.cache( plugins.imagemin( {
-            optimizationLevel: 3,
-            progressive: true,
-            interlaced: true
-        } ) ) )
-        .pipe( gulp.dest( 'dist/images' ));
+gulp.task( 'images', function( callback ) {
+    pump(
+        [
+            gulp.src( 'design/images/**/*' ),
+            plugins.cache( plugins.imagemin( {
+                optimizationLevel: 3,
+                progressive: true,
+                interlaced: true
+            } ) ),
+            gulp.dest( 'dist/images' )
+        ],
+        callback
+    );
 });
 
-gulp.task( 'design-assets', function() {
-    return gulp.src( './design/assets/*' )
-        .pipe( gulp.dest( './dist/assets/' ) );
+gulp.task( 'design-assets', function( callback ) {
+    pump(
+        [
+            gulp.src( './design/assets/*' ),
+            gulp.dest( './dist/assets/' )
+        ],
+        callback
+    );
 });
 
-gulp.task( 'markup', function() {
-    return gulp.src( './web/*' )
-        .pipe( gulp.dest( './dist/' ) );
+gulp.task( 'markup', function( callback ) {
+    pump(
+        [
+            gulp.src( './web/*' ),
+            gulp.dest( './dist/' )
+        ],
+        callback
+    );
 });
 
 gulp.task( 'start', [ 'default', 'watch' ] );

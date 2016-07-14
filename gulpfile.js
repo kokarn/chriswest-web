@@ -11,6 +11,7 @@ gulp.task( 'watch', function() {
     // Watch .js files
     gulp.watch( 'scripts/**/*.js', [ 'scripts' ] );
 
+    // Watch default assets
     gulp.watch( 'web/*', [ 'markup' ] );
 
     // Watch image files
@@ -18,6 +19,12 @@ gulp.task( 'watch', function() {
 
     // Watch design assets
     gulp.watch( 'design/images/**/*', [ 'design-assets' ] );
+});
+
+gulp.task( 'connect', function() {
+    plugins.connect.server({
+        root: 'dist'
+    });
 });
 
 gulp.task( 'styles', function( callback ) {
@@ -99,4 +106,4 @@ gulp.task( 'markup', function( callback ) {
 
 gulp.task( 'start', [ 'default', 'watch' ] );
 
-gulp.task( 'default', [ 'styles', 'scripts', 'images', 'design-assets', 'markup' ] );
+gulp.task( 'default', [ 'connect', 'styles', 'scripts', 'images', 'design-assets', 'markup' ] );

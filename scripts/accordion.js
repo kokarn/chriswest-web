@@ -15,7 +15,7 @@
             } else {
                 $target.velocity( 'slideDown' );
                 $parent.find( 'svg' ).velocity({
-                    rotateZ: '180deg'
+                    rotateZ: '90deg'
                 });
             }
         });

@@ -13,5 +13,6 @@
     "zeroUnit": "no_unit",
     "qualifyingElement": {
         "allowWithClass": true
-    }
+    },
+    "spaceAroundComma": "newline"
 }

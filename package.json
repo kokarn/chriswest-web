@@ -28,7 +28,7 @@
     "gulp-ignore": "^2.0.1",
     "gulp-imagemin": "^3.0.1",
     "gulp-less": "^3.1.0",
-    "gulp-lesshint": "^1.1.0",
+    "gulp-lesshint": "git+https://github.com/lesshint/gulp-lesshint#ae89a4162a2e2192cf337895f1b6440c668df487",
     "gulp-load-plugins": "^1.2.4",
     "gulp-notify": "^2.2.0",
     "gulp-rename": "^1.2.2",

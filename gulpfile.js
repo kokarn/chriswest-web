@@ -104,6 +104,6 @@ gulp.task( 'markup', function( callback ) {
     );
 });
 
-gulp.task( 'start', [ 'default', 'watch' ] );
+gulp.task( 'start', [ 'default', 'connect', 'watch' ] );
 
-gulp.task( 'default', [ 'connect', 'styles', 'scripts', 'images', 'design-assets', 'markup' ] );
+gulp.task( 'default', [ 'styles', 'scripts', 'images', 'design-assets', 'markup' ] );

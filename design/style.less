@@ -137,6 +137,7 @@ header {
         .content-wrapper {
             display: flex;
             flex-wrap: wrap;
+            justify-content: space-between;
             margin: -10px auto;
             max-width: @max-content-width;
             position: relative;
@@ -144,31 +145,69 @@ header {
         }
 
         .artist-wrapper {
-            background-image: url( 'images/background-artist.jpg' );
-            background-position: center;
-            background-size: cover;
-            flex-grow: 1;
-            margin-bottom: 50px;
+            display: inline-block;
+            height: 320px;
+            margin: 10px auto;
+            overflow: hidden;
             position: relative;
-            width: 100%;
+            width: 320px;
 
-            &:after {
-                background-color: rgba( 0, 0, 0, 0.5 );
+            .artist-content-wrapper {
+                padding: 10px;
+                position: absolute;
+                top: 280px;
+
+                h3 {
+                    font-size: 25px;
+                    font-weight: 500;
+                    line-height: 1;
+                    margin: 0;
+                    position: relative;
+                    z-index: 1;
+                }
+
+                p {
+                    position: relative;
+                    z-index: 1;
+                }
+
+                a {
+                    position: relative;
+                    z-index: 1;
+
+                    img {
+                        height: 20px;
+                        width: 20px;
+                    }
+                }
+
+                .background-color-wrapper {
+                    background-color: @artist-background-color;
+                    bottom: 0;
+                    left: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 39px;
+                }
+
+                .background-header {
+                    left: 0;
+                    position: absolute;
+                    right: 0;
+                    top: -53px;
+                    width: 100%;
+                }
+            }
+
+            .background-image {
                 bottom: 0;
-                content: ' ';
                 left: 0;
+                max-height: 100%;
+                max-width: 100%;
                 position: absolute;
                 right: 0;
                 top: 0;
-            }
-
-            h3 {
-                font-size: 90px;
-                line-height: 2.2;
-                margin: 0;
-                position: relative;
-                text-align: center;
-                z-index: 1;
+                z-index: -1;
             }
         }
     }

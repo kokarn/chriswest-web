@@ -63,22 +63,55 @@
     ],
     "artists": [
         {
-            "name": "?"
+            "name": "Marcus Törner",
+            "text": "Han har fyllt dansgolv över hela landet med sin unika blandning av senaste Swedish Dance Chart och gamla hits. Lyssna på hans senaste låtar på Spotify!",
+            "image": "marcus.jpg",
+            "links": [
+                {
+                    "href": "https://soundcloud.com/marcus-t-rner",
+                    "type": "soundcloud"
+                },
+                {
+                    "href": "https://open.spotify.com/artist/2mlN26800Tbsbt8g230dd9",
+                    "type": "spotify"
+                }
+            ]
         },
         {
-            "name": "?"
+            "name": "Briljant",
+            "text": "Våra vänner i Briljant kommer ner från huvudstaden för att köra sin nya singel Staden som brinner. Håll koll på de här två! Det är inte det sista vi hör från dem.",
+            "image": "briljant.jpg",
+            "links": [
+                {
+                    "href": "https://www.facebook.com/Briljant-1019505478095088/?fref=ts",
+                    "type": "facebook"
+                },
+                {
+                    "href": "https://open.spotify.com/artist/2wvlt3lP6m8r5h4jVVqKEE",
+                    "type": "spotify"
+                }
+
+            ]
         },
         {
-            "name": "?"
+            "name": "Roundex",
+            "text": "Vår alldeles egna partykung! Känd för att langa hits från alla decenium i ett tampo som ingen kan stå still till. Och ja, han har Håkan.",
+            "image": "roundex.jpg",
+            "links": [
+                {
+                    "href": "https://soundcloud.com/roundexofficial",
+                    "type": "soundcloud"
+                },
+                {
+                    "href": "https://open.spotify.com/artist/2mlN26800Tbsbt8g230dd9",
+                    "type": "spotify"
+                }
+            ]
         },
         {
-            "name": "?"
-        },
-        {
-            "name": "?"
-        },
-        {
-            "name": "?"
+            "name": "Jonatan",
+            "text": "I sommar står han på samma scen som Dada Life och MAKJ. Nu kommer han även till Browella för att dunka in ett house-set som vi sent kommer glömma!",
+            "image": "jonatan.jpg"
         }
     ]
 }

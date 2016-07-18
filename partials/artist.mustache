@@ -1,13 +1,20 @@
-<div class="artist-wrapper">
-    <h3>
-        {{name}}
-    </h3>
-    {{#text}}
-        <p>
-            {{text}}
-        </p>
-    {{/text}}
+<div class="artist-wrapper js-artist-wrapper">
     {{#image}}
-        <img src="images/{{image}}">
+        <img src="images/{{image}}" class="background-image">
     {{/image}}
+    <div class="artist-content-wrapper js-artist-content-wrapper">
+        <div class="background-color-wrapper"></div>
+        <img src="images/background-artist.png" class="background-header">
+        <h3>
+            {{name}}
+        </h3>
+        {{#text}}
+            <p>
+                {{text}}
+            </p>
+        {{/text}}
+        {{#links}}
+            <a href="{{href}}" class="artist-link {{type}}"><img src="images/{{type}}.svg"></a>
+        {{/links}}
+    </div>
 </div>

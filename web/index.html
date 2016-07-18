@@ -72,15 +72,9 @@
             Festivalen
         </h2>
         <div class="content-wrapper">
-            <p>
-                Browella Festival är ett lite för ambitiöst projekt som började ta form för ungefär ett år sedan. En varm sommardag (med eventuellt en öl innanför västen) kom någon av de då 28-åriga killarna på att det hade ju varit kul med ett riktigt kalas när de tillsammans skulle ta klivet in i deras tredje decennium året efter. En festival skulle det givetvis bli! Frågan är hur man genomför det. En hög med mer eller mindre fantastiska idéer har sedan dess spottats ut, och ett år senare är det inte längre bara snack utan ett faktum. Linköpings bästa lokal är bokad och ett gäng överraskningar ligger och väntar. Detta vill man inte missa. Be there or be square!
-            </p>
-            <p>
-                Och ja, namnet Browella är en oerhört kreativ ordlek med Bråvalla och Coachella ifall någon undrar… Väldigt fyndigt! Givetvis har de inget samband även om det är lätt att tro. :-)
-            </p>
-            <p>
-                Eftersom det finns folk i världen som inte har sociala medier så kommer mycket information presenteras här. Scrolla ner och hitta allt du behöver.
-            </p>
+            {{#intro-paragraphs}}
+                {{> ../partials/paragraph.mustache}}
+            {{/intro-paragraphs}}
         </div>
     </div>
     <div class="section-wrapper lineup-wrapper" id="lineup">
@@ -88,36 +82,9 @@
             Lineup
         </h2>
         <div class="content-wrapper">
-            <div class="artist-wrapper">
-                <h3>
-                    ?
-                </h3>
-            </div>
-            <div class="artist-wrapper">
-                <h3>
-                    ?
-                </h3>
-            </div>
-            <div class="artist-wrapper">
-                <h3>
-                    ?
-                </h3>
-            </div>
-            <div class="artist-wrapper">
-                <h3>
-                    ?
-                </h3>
-            </div>
-            <div class="artist-wrapper">
-                <h3>
-                    ?
-                </h3>
-            </div>
-            <div class="artist-wrapper">
-                <h3>
-                    ?
-                </h3>
-            </div>
+            {{#artists}}
+                {{> ../partials/artist}}
+            {{/artists}}
         </div>
     </div>
     <div class="section-wrapper info-wrapper" id="info">
@@ -125,126 +92,9 @@
             Info
         </h2>
         <ol class="info-list js-info-list">
-            <li>
-                <span>
-                    När, var &amp; hur?
-                    <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
-                        <path d="M0-.25h24v24H0z" fill="none"/>
-                    </svg>
-                </span>
-                <p>
-                    Vi kommer köra den 10:e september på Torn1 i Linköping. Festen börjar vid 18 och slutar 03. Ni får göra det hur ni vill, så länge alla har kul och inget går sönder.
-                </p>
-                <p>
-                    <a href="https://goo.gl/maps/nYUmSh711kQ2" title="Karta!">
-                        Tornbyvägen, 1 Linköping
-                    </a>
-                </p>
-            </li>
-            <li>
-                <span>
-                    Kul! Men varför festival?
-                    <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
-                        <path d="M0-.25h24v24H0z" fill="none"/>
-                    </svg>
-                </span>
-                <p>
-                    Ja varför inte? Är väl lika bra att göra det ordentligt om man nu ändå fyller 30 tänker vi.
-                </p>
-            </li>
-            <li>
-                <span>
-                    Eget dricka?
-                    <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
-                        <path d="M0-.25h24v24H0z" fill="none"/>
-                    </svg>
-                </span>
-                <p>
-                    Eftersom Torn1 har serveringstillstånd så får ingen ha alkohol med sig in på området. Dricka köper man i baren som normala människor. Vi är inga vildar! Sånt får man pyssla med på vår systerfestival Bråvalla. Det kommer finnas mycket gott till bra priser.
-                </p>
-            </li>
-            <li>
-                <span>
-                    Om jag blir hungrig?
-                    <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
-                        <path d="M0-.25h24v24H0z" fill="none"/>
-                    </svg>
-                </span>
-                <p>
-                    Tvättäkta festivalmat (inte langos) kommer kunna köpas hela natten lång.
-                </p>
-            </li>
-            <li>
-                <span>
-                    Dresscode
-                    <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
-                        <path d="M0-.25h24v24H0z" fill="none"/>
-                    </svg>
-                </span>
-                <p>
-                    Så klart det festligaste du kan komma på. Frack, pandadräkt, en rolig hatt eller din finaste skjorta. Så länge du är nöjd är vi glada, men håll inte igen!
-                </p>
-            </li>
-            <li>
-                <span>
-                    Varför kostar det 200 spänn?
-                    <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
-                        <path d="M0-.25h24v24H0z" fill="none"/>
-                    </svg>
-                </span>
-                <p>
-                    Vi har en del utgifter tyvärr. Även om Torn1 är fantastiska och hjälper oss så måste vi betala lite för Linköpings fetaste lokal. Vi ska även ha teknik, vakter och mycket annat kul. Men blir det en slant över så kommer vi givetvis inte behålla det. Det kommer vi skänka bort till de som behöver det bättre än oss. Mer info om det kommer.
-                </p>
-            </li>
-            <li>
-                <span>
-                    Övernattning?
-                    <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
-                        <path d="M0-.25h24v24H0z" fill="none"/>
-                    </svg>
-                </span>
-                <p>
-                    Eftersom ni är ett gäng som kommer från andra delar i världen så behöver ni övernattning. Tält är tyvärr inget alternativ på den här festivalen så vi jobbar på att kunna erbjuda alternativ. Mer info kommer!
-                </p>
-            </li>
-            <li>
-                <span>
-                    Jag vill komma!
-                    <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
-                        <path d="M0-.25h24v24H0z" fill="none"/>
-                    </svg>
-                </span>
-                <p>
-                    Ja vem vill inte det? Har du inte blivit inbjuden till vårt Facebookevent så skriver du till oss på valfri social media och bokar en plats direkt! Har du inte Facebook eller liknande så maila till
-                    <a href="mailto:hello@browella.se">
-                        hello@browella.se
-                    </a>
-                    eller googla efter ett telefonnummer.
-                </p>
-            </li>
-            <li>
-                <span>
-                    Jag har ett gäng vänner som vill följa med.
-                    <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
-                        <path d="M0-.25h24v24H0z" fill="none"/>
-                    </svg>
-                </span>
-                <p>
-                    Troligtvis inga problem. Skriv och fråga så löser vi det!
-                    <a href="mailto:hello@browella.se">
-                        hello@browella.se
-                    </a>
-                </p>
-            </li>
+            {{#info}}
+                {{> ../partials/info}}
+            {{/info}}
         </ol>
     </div>
     <div class="section-wrapper booking-wrapper" id="boka">

@@ -12,7 +12,7 @@ gulp.task( 'watch', function() {
     gulp.watch( 'scripts/**/*.js', [ 'scripts' ] );
 
     // Watch default assets
-    gulp.watch( 'web/*', [ 'markup' ] );
+    gulp.watch( [ 'web/*', 'partials/*', 'content.json' ], [ 'markup' ] );
 
     // Watch image files
     gulp.watch( 'design/images/**/*', [ 'images' ] );
@@ -98,6 +98,7 @@ gulp.task( 'markup', function( callback ) {
     pump(
         [
             gulp.src( './web/*' ),
+            plugins.mustache( 'content.json', {}, {} ),
             gulp.dest( './dist/' )
         ],
         callback

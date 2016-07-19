@@ -1,7 +1,7 @@
 'use strict';
 ( function( $ ){
     $(function(){
-        $( 'body' ).on( 'click touchend', '.js-info-list li span', function( event ){
+        $( 'body' ).on( 'click', '.js-info-list li span', function( event ){
             var $parent = $( event.currentTarget ).parent();
             var $target = $parent.find( 'p' );
 

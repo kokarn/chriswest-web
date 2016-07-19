@@ -114,7 +114,6 @@ header {
         background-image: url( 'images/background-lineup.jpg' );
         background-position: center;
         background-size: cover;
-        // background-color: rgba( 0, 0, 0, 0.5 );
         color: #ffffff;
         padding: 40px 0;
 
@@ -137,7 +136,7 @@ header {
         .content-wrapper {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: space-around;
             margin: -10px auto;
             max-width: @max-content-width;
             position: relative;
@@ -145,9 +144,8 @@ header {
         }
 
         .artist-wrapper {
-            display: inline-block;
             height: 320px;
-            margin: 10px auto;
+            margin: 10px;
             overflow: hidden;
             position: relative;
             width: 320px;
@@ -156,6 +154,7 @@ header {
                 padding: 10px;
                 position: absolute;
                 top: 280px;
+                transform: translateZ(0);
 
                 h3 {
                     font-size: 25px;
@@ -332,5 +331,7 @@ header {
     }
 }
 
+@import '640.less';
 @import '768.less';
 @import '1024.less';
+@import '1100.less';

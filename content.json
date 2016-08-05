@@ -63,6 +63,18 @@
     ],
     "artists": [
         {
+            "name": "The Old Sares",
+            "text": "Han har fyllt dansgolv över hela landet med sin unika blandning av senaste Swedish Dance Chart och gamla hits. Lyssna på hans senaste låtar på Spotify!",
+            "image": "oldspares.jpg",
+            "links": [
+                {
+                    "href": "https://soundcloud.com/the-old-spares",
+                    "type": "soundcloud"
+                },
+            ]
+        },
+        
+        {
             "name": "Marcus Törner",
             "text": "Han har fyllt dansgolv över hela landet med sin unika blandning av senaste Swedish Dance Chart och gamla hits. Lyssna på hans senaste låtar på Spotify!",
             "image": "marcus.jpg",

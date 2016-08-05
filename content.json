@@ -73,6 +73,11 @@
                 }
             ]
         },
+        {
+            "name": "Gretchen (konferencier)",
+            "text": "En bra konferencier fungerar som en BH – den lyfter, värmer och håller samman. Den är raffig, lite vågad, men ack så välskräddad! Gretchen bryter inte isen – hon krossar den, häller över bubbel och toppar med ett tomtebloss.",
+            "image": "gretchen.jpg",
+        },
         
         {
             "name": "Marcus Törner",

@@ -76,9 +76,8 @@
         {
             "name": "Gretchen (konferencier)",
             "text": "En bra konferencier fungerar som en BH – den lyfter, värmer och håller samman. Den är raffig, lite vågad, men ack så välskräddad! Gretchen bryter inte isen – hon krossar den, häller över bubbel och toppar med ett tomtebloss.",
-            "image": "gretchen.jpg",
+            "image": "gretchen.jpg"
         },
-        
         {
             "name": "Marcus Törner",
             "text": "Han har fyllt dansgolv över hela landet med sin unika blandning av senaste Swedish Dance Chart och gamla hits. Lyssna på hans senaste låtar på Spotify!",
@@ -126,7 +125,7 @@
             "text": "I sommar står de på samma scen som Dada Life och MAKJ. Nu kommer PLAJ även till Browella för att dunka in ett house-set med tillhörande saxofon som vi sent kommer glömma!",
             "image": "plaj.jpg"
         },
-                {
+        {
             "name": "Petter Mild",
             "text": "Ingen förfest utan Petter brukar vi säga. Med soul-inspirerande rytmer bygger han stämning som ingen annan. Med ett glas bubbel i handen kommer du känna både solsken och palmblad smeka dig över kinden när du sakta vaggas in i natten. Är du i Linköping eller vid en pool på Ibiza? Svårt att avgöra...",
             "image": "mild.jpg"
